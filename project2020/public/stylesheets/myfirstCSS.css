@@ -1,0 +1,319 @@
+body, html {
+  height: 100%;
+  background-color: black;
+  font-family: ModernFont;
+}
+
+/* all parallax classes allow the background to be fixed and the content to scorll over it*/
+.parallax {
+  background-image: url("/images/mountain-background.jpg");
+  height: 50%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxWeather {
+  background-image: url("/images/mountain-background.jpg"), url(https://media0.giphy.com/media/Y4hQj1h0eVbE3rIInW/giphy.gif?cid=ecf05e47krktdtdjkz3otdfd1ar20c6phguxuzfxi8sjnior&rid=giphy.gif);
+  height: 40%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+.parallax-stockMarket {
+  background-image: url("/images/mountain-background.jpg"), url("/images/moneyrain.gif");
+  height: 40%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+/* make a black bar with content that scrolls over the background */
+.main-content {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 170px;       /* navbar size plus padding */
+  margin-right: 30px;
+}
+
+/* styling for every <div> inside of the main-content class */
+.main-content > div {
+  background-color: black;
+  margin: 10px;
+  padding: 20px;
+  color: white;
+  font-size: 60px;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+/* make a black bar with content that scrolls over the background */
+.bar-container {
+  background-color: black;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: 170px;       /* navbar size plus padding */
+  margin-right: 30px;
+  flex-wrap: wrap;
+}
+
+/* styling for every <div> inside of the bar-container class */
+.bar-container > div {
+  margin: 10px;
+  padding: 20px;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+}
+
+/* make a special black bar for the weather with content that scrolls over the background */
+.bar-container-forecast {
+  background-color: black;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-left: 170px;       /* navbar size plus padding */
+  margin-right: 30px;
+  flex-wrap: wrap;
+}
+
+/* styling for every <div> inside of the bar-container-forecast class */
+.bar-container-forecast > div {
+  margin: 10px;
+  margin-bottom: 30px;
+  padding: 20px;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  flex: 1 1 0px;
+  border: 5px solid #484848;
+  border-radius: 25px;
+}
+
+/* make a special black bar for the stock chart with content that scrolls over the background */
+.bar-container-stock {
+  background-color: black;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-left: 170px;       /* navbar size plus padding */
+  margin-right: 30px;
+  flex-wrap: wrap;
+}
+
+/* styling for every <div> inside of the bar-container-stock class */
+.bar-container-stock > div {
+  margin: 10px;
+  padding: 20px;
+  color: white;
+  font-size: 25px;
+  text-align: left;
+}
+
+/* makes a gap where you can see the background while scrolling over*/
+.parallax-Gap {
+  background-image: url("/images/mountain-background.jpg"), url(https://media0.giphy.com/media/Y4hQj1h0eVbE3rIInW/giphy.gif?cid=ecf05e47krktdtdjkz3otdfd1ar20c6phguxuzfxi8sjnior&rid=giphy.gif);
+  height: 10%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+}
+
+/* creates a sidebar to negative through the website*/
+.sidenav {
+  height: 100%;
+  width: 140px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* set properties for all <a> under the class sidenav*/
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* change appearance when hovering over the navbar text */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* changes appearance of radio boxes to look like three buttons */
+.switch-field {
+	display: flex;
+	margin-bottom: 36px;
+	overflow: hidden;
+}
+
+/* changes appearance of input types inside the class switch-field */
+.switch-field input {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	height: 1px;
+	width: 1px;
+	border: 0;
+	overflow: hidden;
+}
+
+/* changes appearance of labels inside the class switch-field */
+.switch-field label {
+	background-color: #111;
+	color: rgba(0, 0, 0, 0.6);
+	font-size: 20px;
+  color: white;
+	line-height: 1;
+	text-align: center;
+	padding: 8px 16px;
+	margin-right: -1px;
+	transition: all 0.1s ease-in-out;
+}
+
+/* changes appearance of labels inside the class switch-field while hovering */
+.switch-field label:hover {
+	cursor: pointer;
+}
+
+/* changes appearance of labels inside the class switch-field when checked */
+.switch-field input:checked + label {
+	background-color: #ed6e4d;
+	box-shadow: none;
+}
+
+/* changes apperance of the search input box*/
+.search-box {
+  border: none;
+  background-color: #111;
+  background-image: url('/images/cityIcon.png');
+  background-size: 9%;
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding-left: 70px;
+  color: white;
+  border-bottom: 2px solid #ed6e4d;
+  outline: none;
+  font-family: ModernFont;
+  font-size: 50px;
+}
+
+/* changes apperance of the search input box*/
+.search-companyStock {
+  border: none;
+  background-color: #111;
+  color: white;
+  border-bottom: 2px solid #ed6e4d;
+  outline: none;
+  text-align: center;
+  font-family: ModernFont;
+  font-size: 27px;
+}
+
+/* changes apperance of the search input box and button to look the same*/
+#search-wikipedia, #searchButton {
+  border: none;
+  background-color: #111;
+  color: white;
+  border-bottom: 2px solid #ed6e4d;
+  outline: none;
+  text-align: center;
+  font-family: ModernFont;
+  font-size: 50px;
+}
+
+/* changes the appearance of the button when disabled */
+#searchButton:disabled {
+  border: none;
+  background-color: #111;
+  color: grey;
+  border-bottom: 2px solid grey;
+  font-size: 50px;
+}
+
+/* set properties for the page headers */
+#header, #header-weather, #header-stockMarket {
+  position: absolute;
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  margin-left: 170px;       /* navbar size plus padding */
+  margin-right: 30px;
+}
+
+/* gives the temperature some extra properties that differ from the rest */
+#temp, #temp_day1, #temp_day2, #temp_day3, #temp_day4, #temp_day5 {
+  font-size: 70px;
+  font-weight: bolder;
+  text-shadow: 5px -5px 0px #484848;
+}
+
+/* makes the weather description a bit smaller */
+#description_day1, #description_day2, #description_day3, #description_day4, #description_day5 {
+  font-size: 40px;
+}
+
+/* make the headers responsive when the display size is reduced*/
+@media screen and (max-width: 1470px) {
+  #header {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  #header {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  #header-weather {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 870px) {
+  #header-stockMarket {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-height: 800px) {
+  #header {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-height: 930px) {
+  #header-weather {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-height: 930px) {
+  #header-stockMarket {
+    font-size: 30px;
+  }
+}
+
+/* set the font of the webpage */
+@font-face {
+  font-family: ModernFont;
+  src: url("/fonts/Abel-Regular.ttf");
+}

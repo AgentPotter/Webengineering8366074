@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/stylesheets/myfirstCSS.css">
+</head>
+<body>
+  <!-- Navigation bar on the left -->
+  <div class="sidenav">
+    <a href="/">Home</a>
+    <a href="/htm/weather.htm">Weather</a>
+    <a href="/htm/stockMarket.htm">Stock Market</a>
+    <a href="#about">About</a>
+  </div>
+
+  <!-- First part where the background can be seen with header -->
+  <div class="parallax">
+    <div id="header">
+      <h1>Welcome to the Web Engineering Project 2020!</h1>
+    </div>
+  </div>
+
+  <!-- First part which has a black background and contains the wiki function -->
+  <div class="main-content">
+    <div>
+      <h4>Enter something you want to search on Wikipedia!</h4>
+      <input type="text" autocomplete="off" id="search-wikipedia" placeholder="e.g. Rainbow" />
+      <button id="searchButton" onclick="setQuery()">Search</button>
+    </div>
+  </div>
+
+  <!-- second part where the background can be seen -->
+  <div class="parallax"></div>
+
+  <!-- black bar that contains the credit, can be reached by scrolling
+  or the about option in the navigation bar -->
+  <div class="bar-container" id="about">
+    <div> Webengineering Project - Copyright &copy; Jona Krumrein</div>
+  </div>
+
+  <!-- use the Wikipedia Javascript file here -->
+  <script src="/js/wikipedia.js"></script>
+</body>
+</html>

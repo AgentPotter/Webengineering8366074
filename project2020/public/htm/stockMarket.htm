@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/stylesheets/myfirstCSS.css">
+<!-- include the chart.js to use it for displaying charts -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+</head>
+<body>
+  <!-- Navigation bar on the left -->
+  <div class="sidenav">
+    <a href="/">Home</a>
+    <a href="/htm/weather.htm">Weather</a>
+    <a href="/htm/stockMarket.htm">Stock Market</a>
+    <a href="#about">About</a>
+  </div>
+
+  <!-- First part where the background can be seen with header -->
+  <div class="parallax-stockMarket">
+    <div id="header-stockMarket">
+      <h1>Stock Market Overview</h1>
+    </div>
+  </div>
+
+  <!-- black bar that contains: -->
+  <!-- 1. the options to enter different stock symbols on the left -->
+  <!-- 2. the historical stock chart in the middle -->
+  <!-- general information to the chosen stock on the left -->
+  <div class="bar-container-stock">
+    <div>
+      <div class="switch-field">
+        <input type="radio" id="amazon" name="radio" value="AMZN" onclick="drawChart('AMZN')"/>
+        <label for="amazon">Amazon</label>
+        <input type="radio" id="ibm" name="radio" value="IBM" checked onclick="drawChart('IBM')"/>
+        <label for="ibm">IBM</label>
+        <input type="radio" id="walmart" name="radio" value="WMT" onclick="drawChart('WMT')"/>
+        <label for="walmart">Walmart</label>
+      </div>
+      <input type="text" autocomplete="off" class="search-companyStock" placeholder="Enter Stock" />
+    </div>
+    <div>
+      <!-- draw the chart! -->
+      <canvas id="myChart" width="800" height="400"></canvas>
+      <!-- use the stockMarket Javascript file here -->
+      <script src="/js/stockMarket.js"></script>
+    </div>
+    <div>
+      <div id="symbol"></div>
+      <div id="date"></div>
+      <div id="value"></div>
+      <div id="max"></div>
+      <div id="min"></div>
+    </div>
+  </div>
+
+  <!-- second part where the background can be seen -->
+  <div class="parallax-stockMarket"></div>
+
+  <!-- black bar that contains the credit, can be reached by scrolling
+  or the about option in the navigation bar -->
+  <div class="bar-container" id="about">
+    <div> Webengineering Project - Copyright &copy; Jona Krumrein</div>
+  </div>
+
+</body>
+</html>

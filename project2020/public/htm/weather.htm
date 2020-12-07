@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/stylesheets/myfirstCSS.css">
+</head>
+<body>
+  <!-- Navigation bar on the left -->
+  <div class="sidenav">
+    <a href="/">Home</a>
+    <a href="/htm/weather.htm">Weather</a>
+    <a href="/htm/stockMarket.htm">Stock Market</a>
+    <a href="#about">About</a>
+  </div>
+
+  <!-- First part where the background can be seen with header -->
+  <div class="parallaxWeather">
+    <div id="header-weather">
+      <h1>Weather Forecast</h1>
+    </div>
+  </div>
+
+  <!-- black bar that contains the current weather -->
+  <!-- displayed in two parts starting with the location and date... -->
+  <div class="bar-container">
+    <div>
+      <div id="location"></div>
+    </div>
+  </div>
+
+  <!-- and continues with the weater and the search bar -->
+  <div class="bar-container">
+    <div>
+      <div id="description"></div>
+    </div>
+    <div>
+      <div id="temp"></div>
+    </div>
+    <div>
+      <div id="icon"></div>
+    </div>
+    <input type="text" autocomplete="off" class="search-box" placeholder="Enter city" />
+  </div>
+
+  <!-- small gap where the background can be seen -->
+  <div class="parallax-Gap"></div>
+
+  <!-- black bar that contains the weather forecast -->
+  <!-- starts with the header... -->
+  <div class="bar-container">
+    <div>Forecast for the next 5 days</div>
+  </div>
+
+  <!-- continues with 4 blocks for each day -->
+  <div class="bar-container-forecast">
+    <div>
+      <div id="description_day1"></div>
+      <div id="temp_day1"></div>
+      <div id="icon_day1"></div>
+      <div id="weekday1"></div>
+    </div>
+    <div>
+      <div id="description_day2"></div>
+      <div id="temp_day2"></div>
+      <div id="icon_day2"></div>
+      <div id="weekday2"></div>
+    </div>
+    <div>
+      <div id="description_day3"></div>
+      <div id="temp_day3"></div>
+      <div id="icon_day3"></div>
+      <div id="weekday3"></div>
+    </div>
+    <div>
+      <div id="description_day4"></div>
+      <div id="temp_day4"></div>
+      <div id="icon_day4"></div>
+      <div id="weekday4"></div>
+    </div>
+  </div>
+
+  <!-- third part where the background can be seen -->
+  <div class="parallaxWeather"></div>
+
+  <!-- black bar that contains the credit, can be reached by scrolling
+  or the about option in the navigation bar -->
+  <div class="bar-container" id="about">
+    <div> Webengineering Project - Copyright &copy; Jona Krumrein</div>
+  </div>
+
+  <!-- include the weather Javascript file -->
+  <script src="/js/weather.js"></script>
+</body>
+</html>
